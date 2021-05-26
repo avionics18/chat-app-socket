@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Chat App</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+	<!-- Socket JS -->
+	<script src="/socket.io/socket.io.min.js"></script>
+	<!-- Custom Styling -->
+	<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+	<div class="container py-5">
+		<div class="card border-info">
+			<div class="card-header bg-info">
+				<h5 class="m-0 text-center text-dark font-weight-bold">CHAT APP</h5>
+			</div>
+			<div class="card-body position-relative">
+				<div class="form-row mb-3">
+					<div class="col-lg-9">
+						<input type="text" id="msgInp" class="form-control" placeholder="Enter your message...">
+					</div>
+					<div class="col-lg-3">
+						<button class="btn btn-secondary btn-block" id="msgBtn">Send &rarr;</button>
+					</div>
+				</div>
+				<!-- msg form -->
+				<div class="msg-box p-4 bg-light border shadow-sm rounded-lg"></div>
+				<!-- msg-box -->
+
+				<div class="login-overlay">
+					<div class="w-75">
+						<p class="d-none text-center" id="loadingAnimation">
+							<i class="fa fa-spinner fa-pulse fa-3x fa-fw" ></i>
+						</p>
+						<h5 class="text-center"><b>Login</b></h5>
+						<div class="input-group my-3">
+							<input type="text" class="form-control" id="loginInp" placeholder="Enter your username">
+							<div class="input-group-append">
+							    <button class="btn btn-info" type="button" id="loginBtn">Submit &raquo;</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Login Overlay -->
+			</div>
+		</div>
+	</div>
+
+	<script src="main.js"></script>
+
+</body>
+</html>
